@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Javascript Lanjutan</title>
+</head>
+<body>
+  <h1>Javascript Lanjutan</h1>
+  <h3>Execution Context, Hoisting</h3>
+
+    <script type="text/javascript">
+
+    //   2.1 EXECUTION CONTEXT, HOISTING & SCOPE
+
+    
+
+    var nama = 'Andi'
+    var umur = 24
+
+    console.log(sayHello());
+
+    function sayHello(){
+        return `Hallo, nama saya ${nama}, saya ${umur} tahun.`;
+    }
+
+    console.log('------- contoh lain -------------');
+
+    let email = 'andi@gmail.com'
+    let username = '@andi'
+
+    function cetakURL(username){
+      let instagramURL = 'https://instagram.com/'
+      return instagramURL + username;
+    }
+    console.log(cetakURL(username));
+
+    console.log('------- contoh lain ---------');
+
+    function a(){
+      console.log('ini a');
+
+      function b(){
+        console.log('ini b');
+
+        function c() {
+          console.log('ini c');
+        }
+
+        c();
+      }
+      b();
+    }
+    a();
+
+    console.log('--- contoh lain ---');
+
+    function satu(){
+      let nama_second = 'Sandhika';
+      console.log(nama_second);
+    }
+
+    function dua(){
+      console.log(nama_second);
+    }
+
+    console.log(nama_second);
+    var nama_second = 'Erik'
+    satu();
+    dua('Dody');
+    console.log(nama_second);
+
+
+  </script>
+</body>
+</html>

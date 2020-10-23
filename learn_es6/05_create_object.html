@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ES6</title>
+</head>
+<body>
+    <h1>ES6</h1>
+    <h3>Create Object</h3>
+
+    <script type="text/javascript">
+
+        let nama = 'Jeje'
+        let hobi = 'Menonton'
+
+        // create object es5
+        let orang = {
+            nama : nama,
+            hobi : hobi
+        }
+
+        // create object es6
+        let siswa = {
+            nama,
+            hobi,
+            belajar : function (x) {
+              console.log(`selamat belajar ${x}`);
+            }
+        }
+
+        console.log(orang);
+        console.log(orang.nama);
+        console.log('-------------');
+        console.log(siswa);
+        console.log(siswa.nama);
+        console.log(siswa.belajar('es6'));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS BEGIN</title>
+</head>
+<body>
+
+    <h1>Array</h1>
+    
+    <script type="text/javascript">
+
+    var arr = ["a",1,true]
+    console.log(arr);
+    /* ------------ menambah isi array ------------- */
+    var arrs = []
+    arrs[0] = "hi"
+    arrs[1] = "selamat"
+    arrs[2] = "pagi"
+    console.log(arrs);
+    /* ------------ menghapus isi array ------------- */
+    var delArr = ["halo","selamat","malam"]
+    delArr[1] = undefined;
+    console.log(delArr);
+    /* ------------ menampilkan isi array ------------- */
+    var viewArr = ["halo","selamat","malam"]
+    for (let i = 0; i < viewArr.length; i++) {
+      console.log(i+'. '+viewArr[i]);
+    }
+
+
+    </script>
+</body>
+</html>

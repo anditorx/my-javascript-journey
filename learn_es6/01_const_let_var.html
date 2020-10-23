@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ES6</title>
+</head>
+<body>
+    <h1>Const, Lest, Var</h1>
+
+    <h3>Apel</h3>
+    <h3>Jeruk</h3>
+    <h3>Mangga</h3>
+    <h3>Jambu</h3>
+
+    <script type="text/javascript">
+    
+    let buah = document.getElementsByTagName('h3');
+    console.log(buah);
+
+    for (let i = 0; i < buah.length; i++) {
+        buah[i].onclick = function(){
+            alert('index ke- '+i)
+        }
+        
+    }
+
+    </script>
+</body>
+</html>

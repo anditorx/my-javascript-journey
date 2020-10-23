@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Javascript Lanjutan</title>
+  <style>
+     
+  </style>
+</head>
+<body>
+  <h1>Javascript Lanjutan</h1>
+  <h3>Template Literals</h3>
+
+  
+  <script type="text/javascript">
+
+    // template literals / template strings
+    const nama = 'James';
+    const umur = 24;
+    console.log(`Hello, nama saya ${nama}, dan saya ${umur} tahun`)
+
+    // embedded expressions
+    console.log(`${1+1}`)
+    // console.log(`${alert('hello')}`) 
+    const x = 11
+    console.log(`${(x%2==0) ? 'genap' : 'ganjil'}`)
+    
+    // html fragments
+
+    function cetakMataKuliah(mataKuliah){
+      return `
+        <ol>
+          ${mataKuliah.map(mk => `<li>${mk}</li>`).join('')}
+        </ol>
+      `;
+    }
+    const mhs = {
+        nama: 'Andi',
+        umur: 22,
+        semester: 5,
+        mataKuliah: [
+          'Rekayasa Web',
+          'Analisis dan Perancangan Sistem Informasi',
+          'Pempgraman Sistem Interaktif',
+          'Perancangan Sistem Berorientasi Object'
+        ]
+    };
+    const el = `<div class="mhs">
+        <h2>${mhs.nama}</h2>
+        <span class="semester">Semester : ${mhs.semester}</span>
+        <h4>Mata Kuliah : </h4>
+        ${cetakMataKuliah(mhs.mataKuliah)}    
+    </div>`
+    console.log(el)
+    document.body.innerHTML = el;
+
+    
+
+
+  </script>
+</body>
+</html>

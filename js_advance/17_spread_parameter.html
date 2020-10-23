@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Javascript Lanjutan</title>
+  <style>
+     
+
+     body{
+         background-color: salmon;
+         text-align: center;
+     }
+     .nama {
+         font-family: Arial, Helvetica, sans-serif;
+         font-size: 80px;
+         color: white;
+     }
+     .nama span {
+         display: inline-block;
+         transition: .2s;
+         cursor: pointer;
+     }
+     .nama span:hover{
+         transform: scale(2) translateY(-20px);
+     }
+
+  </style>
+</head>
+<body>
+  <h1>Javascript Lanjutan</h1>
+  <h3>Spread Parameter</h3>
+
+  <ul>
+      <li>Sandi</li>
+      <li>Dodi</li>
+      <li>Erik</li>
+  </ul>
+
+  <h1 class="nama">Donaruma</h1>
+
+  <script type="text/javascript">
+
+    const mhs = ['Budi','Deni','Ari'];
+    console.log(mhs)
+    console.log(...mhs)
+    console.log(...mhs[0])
+
+    console.log('----------');
+    // menggabungkan 2 array
+    const dosen = ['Sutisna','Agus','Irawan'];
+    const orang = [...mhs, ...dosen];
+    const orang2 = mhs.concat(dosen);
+    console.log(orang)
+    console.log(orang2)
+
+    console.log('----------');
+    // meng-copy array
+    console.log('meng-copy array');
+    const mhs1 = [...mhs];
+    mhs1[0] = 'Fajar';
+    console.log(mhs)
+    console.log(mhs1);
+
+    console.log('-----------');
+
+    const liMhs = document.querySelectorAll('li');
+    const mhs2 = [];
+    for (let i = 0; i < liMhs.length; i++) {
+        mhs2.push(liMhs[i].textContent);
+    }
+    console.log(mhs2);
+    console.log('-------------');
+    const mhs3 = [...liMhs].map(m => m.textContent)
+    console.log(mhs3);
+
+    // animation
+
+    const nama = document.querySelector('.nama');
+    const huruf1 = [...nama.textContent];
+    console.log(huruf1);
+    const huruf = [...nama.textContent].map(h => `<span>${h}</span>`).join('');
+    console.log(huruf);
+    nama.innerHTML = huruf;
+    
+  </script>
+</body>
+</html>

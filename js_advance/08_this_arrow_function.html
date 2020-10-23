@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Javascript Lanjutan</title>
+  <style>
+      * {
+          margin: 0;
+          padding: 0;
+      }
+
+      .box {
+          width: 100px;
+          height: 100px;
+          border: 1px solid black;
+          margin: 50px auto;
+          transition: .3s width, .3s height .3s, .3s margin-top .3s, 1s background-color;
+      }
+      .size{
+          width: 150px;
+          height: 150px;
+          margin-top: 25px;
+      }
+      .caption {
+          background-color: black;
+      }
+
+  </style>
+</head>
+<body>
+  <h1>Javascript Lanjutan</h1>
+  <h3>This Arrow Function</h3>
+
+  <div class="box">
+
+  </div>
+
+  <script type="text/javascript">
+
+    // // object literal
+    // const mhs0 = {
+    //     nama: 'Dodi',
+    //     umur: 22,
+    //     sayHello: function() {
+    //         console.log(`Halo, nama saya ${this.nama}, dan saya ${this.umur} tahun`);
+    //     }
+    // }
+
+    // const mhs1 = {
+    //     nama: 'Rocki',
+    //     umur: 22,
+    //     sayHello: () => {
+    //         console.log(`Halo, nama saya ${this.nama}, dan saya ${this.umur} tahun`);
+    //     }
+    // }
+
+    // // function expression
+    // const Mahasiswa = function (){
+    //     this.nama= 'Rocki',
+    //     this.umur= 22,
+    //     this.sayHello= () => {
+    //         console.log(`Halo, nama saya ${this.nama}, dan saya ${this.umur} tahun`);
+    //     }
+    //     // function declaration
+    //     // setInterval(function(){
+    //     //     console.log(this.umur++)
+    //     // }, 500)
+    //     setInterval(() => {
+    //         console.log(this.umur++)
+    //     }, 500)
+
+    // }
+
+    // const andi = new Mahasiswa();
+
+    /* ---- studi kasus lain ----- */
+
+    const box = document.querySelector('.box');
+    box.addEventListener('click', function(){
+        console.log(this)
+
+        let size = 'size'
+        let capt = 'caption'
+        
+        if(this.classList.contains(size)){
+            [size,capt] = [capt,size]
+        }
+
+        this.classList.toggle(size)
+
+        setTimeout( () => {
+            console.log(this)
+            this.classList.toggle(capt)
+        },600)
+    })
+
+  
+  </script>
+</body>
+</html>

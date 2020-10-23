@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ES6</title>
+</head>
+<body>
+    <h1>ES6</h1>
+    <h3>Set</h3>
+
+    <script type="text/javascript">
+
+        let buah = new Set()
+        buah.add('Mangga').add('Jambu').add('Apel').add('Jambu')
+        
+        // buah.clear();
+        console.log(buah.size);
+        buah.delete('Apel')
+        console.log(buah.has('Mangga'));
+        console.log(buah.size);
+        console.log(buah);
+        console.log('--------------------');
+        let kota = ['Jakarta','Bandung','Surabaya','Tangerang','Bandung','Jakarta']
+        console.log(kota);
+        let setKota = new Set(kota)
+        console.log(setKota);
+        kota = [...setKota]
+        console.log(kota);
+    </script>
+</body>
+</html>

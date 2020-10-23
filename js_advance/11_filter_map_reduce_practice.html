@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Javascript Lanjutan</title>
+  <style>
+     
+  </style>
+</head>
+<body>
+  <h1>Javascript Lanjutan</h1>
+  <h3>Filter, Map, & Reduce Practice</h3>
+
+  <br><br>
+  <h3>My Video</h3>
+  <ul>
+      <li data-duration="15:27">Teknik Podomoro</li>
+      <li data-duration="11:18">Javascript Advanced | High Order Function</li>
+      <li data-duration="21:40">Javascript Advanced | This pada Arrow Function</li>
+      <li data-duration="19:38">Website Cheater</li>
+      <li data-duration="12:10">Javascript Advanced | Arrow Function</li>
+      <li data-duration="20:43">Javascript Advanced | Closure</li>
+      <li data-duration="14:30">#TANYAANDI</li>
+      <li data-duration="26:38">Javascript Advanced | Execution Context</li>
+      <li data-duration="17:33">Javascript Advanced | Protorype</li>
+      <li data-duration="10:39">Javascript Advanced | Object.create()</li>
+      <li data-duration="17:31">Javascript Advanced | Object (Revisited)</li>
+      <li data-duration="14:25">5 Tips when got error</li>
+  </ul>
+
+  <h3>My Playlist</h3>
+  <ol>
+      <li>
+          <h4>Javascript Advanced</h4>
+          <p>Jumlah Video : <span class="jumlah-video"></span></p>
+          <p>Total Durasi : <span class="total-durasi"></span></p>
+      </li>
+  </ol>
+
+  <script type="text/javascript">
+
+    // get all video element
+    const videos = Array.from(document.querySelectorAll('[data-duration]'))
+    console.log(videos)
+    // select just 'Javascript Advanced'
+    let jsLanjut = videos.filter(video => video.textContent.includes('Javascript Advanced'))
+    
+    // take each video duration
+    .map(item => item.dataset.duration)
+    // change duration to float, change minute to seconds
+    .map(time => {
+        // 10:30 -> [10,30] split
+        const parts = time.split(':').map(part => parseFloat(part));
+        return (parts[0] * 60) + parts[1]
+    })
+    // add up all the seconds
+    .reduce((total,seconds) => total + seconds);
+    // change format to hours minutes seconds
+    const hours = Math.floor(jsLanjut / 3600);
+    jsLanjut = jsLanjut - hours * 3600
+    const minute  = Math.floor(jsLanjut / 60)
+    const seconds = jsLanjut - minute * 60
+    // save to DOM
+    const pDuration = document.querySelector('.total-durasi');
+    pDuration.textContent = `${hours} jam, ${minute} menit, ${seconds} detik`
+    const totalVideo = videos.filter(video => video.textContent.includes('Javascript Advanced')).length
+    const pTotalVideo = document.querySelector('.jumlah-video')
+    pTotalVideo.textContent = `${totalVideo} video`
+    console.log(seconds)
+
+  </script>
+</body>
+</html>

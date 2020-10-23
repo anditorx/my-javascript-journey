@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM</title>
+    <style>
+        body {
+            margin: 50px;
+            font-family: arial;
+            background-color: #666;
+        }
+
+        .container {
+            width: 900px;
+            margin: auto;
+        }
+
+        .card {
+            display: inline-block;
+            width: 220px;
+            padding: 0 80px;
+            height: 80px;
+            font-size: 16px;
+            line-height: 80px;
+            border-radius: 40px;
+            background-color: #f1f1f1;
+            margin: 20px;
+            position: relative;
+            text-align: center;
+        }
+
+        .card img {
+            float: left;
+            margin: 0 10px 0 -80px;
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .card .nama, .card .telp {
+            display: block;
+            line-height: 20px;
+            padding: 0 5px;
+        }
+
+        .card .nama {
+            margin-left: 20px;
+            margin-top: 20px;
+            font-size: 20px;
+        }
+
+        .card .telp {
+            margin-left: 20px;
+            margin-top: 5px;
+            font-size: 16px;
+            color: #aaa;
+        }
+
+        .card .close {
+            font-size: 24px;
+            font-weight: bold;
+            color: #999;
+            position: absolute;
+            top: 0;
+            right: 30px;
+            cursor: pointer;
+        }
+
+        .card:hover .close {
+            color: red;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <h1 id="judul">Hello World</h1>
+    <div id="container">
+        
+        <div class="card">
+            <img src="logo-html.jpg" alt="logo html" width="500" height="300">
+            <span class="nama">HTML</span>
+            <span class="telp">082398329832</span>
+            <a href="" class="close" >x</a>
+        </div>
+
+        <div class="card">
+            <img src="logo-html.jpg" alt="logo html" width="500" height="300">
+            <span class="nama">Andi</span>
+            <span class="telp">082398329832</span>
+            <a href="" class="close" >x</a>
+        </div>
+
+        <div class="card">
+            <img src="logo-html.jpg" alt="logo html" width="500" height="300">
+            <span class="nama">Ankas</span>
+            <span class="telp">082398329832</span>
+            <a href="" class="close" >x</a>
+        </div>
+
+        <div class="card">
+            <img src="logo-html.jpg" alt="logo html" width="500" height="300">
+            <span class="nama">Rusti</span>
+            <span class="telp">082398329832</span>
+            <a href="" class="close" >x</a>
+        </div>
+
+
+    </div>
+
+    <script type="text/javascript">
+        
+        
+        // const close = document.querySelector('.close')
+        // const card = document.querySelector('.card')
+
+        // close.addEventListener('click',function(){
+        //     card.style.display = 'none'
+        // })
+
+        // DOM Traversal
+        // const close2 = document.querySelectorAll('.close')
+        // console.log(close2);
+        // for (let i = 0; i < close2.length; i++) {
+        //     close2[i].addEventListener('click', function(event){
+        //         // alert('tombol ke- '+i)
+        //         // close2[i].parentElement.style.display = 'none'
+        //         console.log(event);
+        //         event.target.parentElement.style.display = 'none'
+        //     })
+        // }
+        
+        const close3 = document.querySelectorAll('.close')
+        close3.forEach(el => {
+            el.addEventListener('click', function(e){
+                e.target.parentElement.style.display = 'none'
+            })
+        });
+        
+
+    </script>
+    
+</body>
+</html>

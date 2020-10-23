@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Javascript Lanjutan</title>
+  <style>
+     .hl{
+       background-color: salmon;
+     }
+  </style>
+</head>
+<body>
+  <h1>Javascript Lanjutan</h1>
+  <h3>Destructuring Function</h3>
+
+  
+  <script type="text/javascript">
+
+    function kalkulasi(a,b){
+        return [a+b, a-b, a*b, a/b];
+    }
+    const [tambah, kurang, kali, bagi] = kalkulasi(10,2);
+    console.log(`Penjumlahan : ${tambah}`);
+    console.log(`Pengurangan : ${kurang}`);
+    console.log(`Perkalian : ${kali}`);
+    console.log(`Pembagian : ${bagi}`);
+
+    console.log('------ cara lain ----------');
+
+    function calculate(a,b){
+        return {
+            tambah2: a+b,
+            kurang2: a-b,
+            kali2: a*b,
+            bagi2: a/b
+        }
+    }
+
+    const {tambah2, kurang2, kali2, bagi2} = calculate(8,4);
+    console.log(`Penjumlahan : ${tambah2}`);
+    console.log(`Pengurangan : ${kurang2}`);
+    console.log(`Perkalian : ${kali2}`);
+    console.log(`Pembagian : ${bagi2}`);
+
+    console.log('--------------')
+    /*  */
+    
+  </script>
+</body>
+</html>

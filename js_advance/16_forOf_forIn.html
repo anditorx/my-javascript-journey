@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Javascript Lanjutan</title>
+  <style>
+     .hl{
+       background-color: salmon;
+     }
+  </style>
+</head>
+<body>
+  <h1>Javascript Lanjutan</h1>
+  <h3>For Of & For In</h3>
+
+
+  <ul>
+      <li class="nama">Andi</li>
+      <li class="nama">Rusti</li>
+      <li class="nama">Ajie</li>
+  </ul>
+  
+  <script type="text/javascript">
+
+    /* for..of */
+
+    // array
+    const mhs = ['Andi','Enzi','Beni','Wahyu'];
+
+    for (let i = 0; i < mhs.length; i++) {
+        console.log(mhs[i]);
+    }
+    console.log('--------');
+    mhs.forEach(m => console.log(m));
+
+    console.log('---------')
+    mhs.forEach((m,i)=> {
+        console.log(`index ke-${i} = ${m}`);
+    });
+
+    console.log('------------');
+    for(const m of mhs){
+        console.log(m);
+    }
+    console.log('----------')
+
+    // string
+    const nama = 'Andi';
+
+    for(const n of nama){
+        console.log(n);
+    }
+    console.log('------------');
+
+    for(const [i,mn] of mhs.entries()){
+        console.log(`index ke-${i} = ${mn}`);
+    }
+
+    console.log('-------------')
+    // nodelist
+
+    const listNama = document.querySelectorAll('.nama');
+    console.log(listNama);
+    listNama.forEach(n => console.log(n.innerHTML))
+    console.log('----------')
+    for(n of listNama){
+        console.log(n.innerHTML)
+    }
+
+    console.log('--------------')
+    // arguments
+    function jumlahkanAngka() {
+        let jumlah = 0;
+        for(a of arguments) {
+            jumlah += a;
+        }
+        return jumlah;
+    }
+    console.log(jumlahkanAngka(1,2,3,4,5))
+
+    console.log('-------------')
+    // for..in
+    console.log('for..in')
+    const siswa = {
+        nama : 'Tsubasa',
+        umur: 17,
+        email: 'satumalam@gmail.com'
+    }
+
+    for( s in siswa){
+        console.log(siswa[s]);
+    }
+
+  </script>
+</body>
+</html>

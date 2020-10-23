@@ -1,0 +1,30 @@
+[
+    {
+      "nama": "Andi Rustianto",
+      "nrp" : "09328756901",
+      "email" : "andirusti@gmail.com",
+      "jurusan" : "Teknik Informatika",
+      "idDosenWali" : 1
+    },
+    {
+      "nama": "Doddy Dores",
+      "nrp" : "09328756932",
+      "email" : "doddydores@gmail.com",
+      "jurusan" : "Teknik Mesin",
+      "idDosenWali" : 2
+    },
+    {
+      "nama": "Raka Handoko",
+      "nrp" : "09328756456",
+      "email" : "rakas@gmail.com",
+      "jurusan" : "Teknik Industri",
+      "idDosenWali" : 2
+    },
+    {
+      "nama": "Michel Sania",
+      "nrp" : "09328756889",
+      "email" : "sania@gmail.com",
+      "jurusan" : "Teknik Informatika",
+      "idDosenWali" : 1
+    }
+]

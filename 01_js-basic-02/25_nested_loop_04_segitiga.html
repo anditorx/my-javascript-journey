@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS BEGIN</title>
+</head>
+<body>
+
+    <h1>Nested Looping</h1>
+    <script type="text/javascript">
+
+        /* SEGITIGA 1 */
+        document.write('SEGITIGA 1 <br><br>');
+        for (let i = 1; i <= 5; i++) {
+          for (let j = 1; j <= i; j++) {
+            document.write('*');
+          }
+          document.write('<br>');
+        }
+        document.write('<br>');
+
+        /* SEGITIGA 2 */
+        document.write('SEGITIGA 2 <br><br>');
+        for (let i = 5; i >= 1; i--) {
+          for (let j = 1; j <= i; j++) {
+            document.write('*');
+          }
+          document.write('<br>');
+        }
+        document.write('<br>');
+
+        /* SEGITIGA 3 */
+        document.write('SEGITIGA 3 <br><br>');
+        for (let i = 1; i <=5; i++) {
+          for (let j = i; j <= 5; j++) {
+            document.write("_");
+          }
+          for (let k = 1; k <= i; k++) {
+            document.write('*');
+          }
+          document.write('<br>');
+        }
+        document.write('<br>');
+
+        /* SEGITIGA 4 */
+        document.write('SEGITIGA 4 <br><br>');
+        for (let i = 1; i <= 5; i++) {
+          for (let j = 1; j <= i; j++) {
+            document.write("_");
+          }
+          for (let k = i; k <= 5; k++) {
+            document.write('*');
+          }
+          document.write('<br>');
+        }
+        document.write('<br>');
+
+        /* PIRAMIDA 1 */
+        document.write('PIRAMIDA 1 <br><br>');
+        for (let i = 1; i <= 5; i++) {
+          for (let j = i; j <= 5; j++) {
+            document.write("_");
+          }
+          for (let k = 1; k <= i; k++) {
+            document.write('*');
+          }
+          for (let m = 1; m <= i-1; m++) {
+            document.write('*');
+          }
+          document.write('<br>');
+        }
+        document.write('<br>');
+
+        /* PIRAMIDA 2 */
+        document.write('PIRAMIDA 2 <br><br>');
+        for (let i = 1; i <= 5; i++) {
+          for (let j = 1; j <= i; j++) {
+            document.write("_");
+          }
+          for (let k = i; k <= 5; k++) {
+            document.write('*');
+          }
+          for (let m = i+1; m <= 5; m++) {
+            document.write('*');
+          }
+          document.write('<br>');
+        }
+        document.write('<br>');
+
+
+        document.write('--------------------- <br><br>');
+
+        /* LAGI */
+
+        /* Seigita Siku-siku */
+        document.write('Segitiga Sikusiku <br><br>');
+        for (let i = 1; i <= 5; i++) {
+          for (let j = 4; j >= i; j--) {
+            document.write("_");
+          }
+          for (let k = 1; k <= i; k++) {
+            document.write(k)
+          }
+          document.write('<br>');
+        }
+        document.write('<br>');
+
+        /* Seigita Siku-siku */
+        document.write('Segitiga Sikusiku <br><br>');
+        for (let i = 1; i <= 5; i++) {
+          for (let j = 4; j >= i; j--) {
+            document.write("_");
+          }
+          for (let k = i; k >= 1; k--) {
+            document.write(k)
+          }
+          document.write('<br>');
+        }
+        document.write('<br>');
+
+        /* Seigita Siku-siku */
+        document.write('Segitiga Sikusiku <br><br>');
+        for (let i = 1; i <= 5; i++) {
+          for (let j = 5; j >= i; j--) {
+            document.write(j);
+          }
+          
+          document.write('<br>');
+        }
+        document.write('<br>');
+
+        /* Seigita Siku-siku */
+        document.write('Segitiga Sikusiku <br><br>');
+        for (let i = 1; i <= 5; i++) {
+          for (let j = i; j >= 1; j--) {
+            document.write(j);
+          }
+          
+          document.write('<br>');
+        }
+        document.write('<br>');
+
+        /* Seigita Siku-siku */
+        document.write('Segitiga Sikusiku <br><br>');
+        for (let i = 5; i >= 1; i--) {
+          for (let j = 5; j >= i; j--) {
+            document.write(j);
+          }
+          
+          document.write('<br>');
+        }
+        document.write('<br>');
+
+        /* Seigita Siku-siku */
+        document.write('Segitiga Sikusiku <br><br>');
+        for (let i = 5; i >= 1; i--) {
+          for (let j = i; j <= 5; j++) {
+            document.write(j);
+          }
+          
+          document.write('<br>');
+        }
+        document.write('<br>');
+
+        /* Ketupat */
+        document.write('Ketupat <br><br>');
+        for (let a = 9; a > 0; a--) {
+          for (let i = 1; i <= a; i++) {
+            document.write("_");            
+          }
+          for (let a1 = 10; a1 > a; a1--) {
+            document.write("x");            
+          }
+          for (let a2 = 9; a2 > a; a2--) {
+            document.write("x");            
+          }
+          document.write("<br>");
+        }
+        for (let b = 0; b <= 9; b++) {
+          for (let j = 1; j <= b; j++) {
+            document.write("_");
+          }
+          for (let b1 = 10; b1 > b; b1--) {
+            document.write("x");
+          }
+          for (let b2 = 9; b2 > b; b2--) {
+            document.write("x");
+          }
+          document.write("<br>");
+        }
+
+
+
+    </script>
+</body>
+</html>

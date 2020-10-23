@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Javascript Lanjutan</title>
+  <style>
+     .hl{
+       background-color: salmon;
+     }
+  </style>
+</head>
+<body>
+  <h1>Javascript Lanjutan</h1>
+  <h3>Tagged Template Literals</h3>
+
+  
+  <script type="text/javascript">
+
+  const nama = 'Sendi'
+  const umur = 33
+
+  function coba(strings, ...values) {
+    // let result = '';
+    // strings.forEach((str,i) => {
+    //   result += `${str}${values[i] || ''}`
+    // });
+    // return result;
+    return strings.reduce((result, str, i) => `${result}${str}${values[i] || ''}`);
+  }
+
+  const str = coba `halo, nama saya ${nama}, saya ${umur} tahun.`;
+  console.log(str);
+
+  console.log('---------')
+
+  function highlight(strings, ...values) {
+    return strings.reduce((result, str, i) => `${result}${str}<span class="hl">${values[i] || ''}</span>`);
+  }
+
+  const str2 = highlight `halo, nama saya ${nama}, saya ${umur} tahun.`;
+  // console.log(str2);
+  document.body.innerHTML = str2
+
+  </script>
+</body>
+</html>

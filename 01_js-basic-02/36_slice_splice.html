@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS BEGIN</title>
+</head>
+<body>
+
+    <h1>Array</h1>
+    <p>Splice and slice</p>
+    <script type="text/javascript">
+
+    /*
+        Splice
+        splice(indexAwal, *mauDiHapusBerapa, *elemenBaru1, *elemenBaru2, ...)
+        note: 
+            * = optional
+    */
+    var arr = ['andi','penuh','ambisi','masa']
+    arr.splice(2, 0, 'iya','haha')
+    console.log(arr);
+    
+    /*
+        Slice : mengambil potongan array
+        slice(indexAwal,indexAkhir)
+        note: 
+            * = optional
+    */
+    var arrs = ['andi','penuh','ambisi','masa','kuat']
+    var arrs2 = arrs.slice(1,3)
+    console.log(arrs2);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Javascript Lanjutan</title>
+</head>
+<body>
+  <h1>Javascript Lanjutan</h1>
+  <h3>Callback Javascript</h3>
+  <p>Function yang dikirimkan sebagai parameter pada function lain</p>
+  <p>Function yang dieksekusi setelah fungsi lain selesai dijalankan</p>
+  
+  <script type="text/javascript">
+  // callback 
+
+  // synchronus callback
+  // function halo(nama){
+  //   alert(`Halo, ${nama}`);
+  // }
+
+  // function tampilkanPesan(callback){
+  //   const nama = prompt(`Masukkan Nama : `);
+  //   callback(nama);
+  // }
+
+  // tampilkanPesan(halo)
+
+  console.log('---------');
+
+  // async callback
+  const mhs = [
+    {
+      "nama": "Andi Rustianto",
+      "nrp" : "09328756901",
+      "email" : "andirusti@gmail.com",
+      "jurusan" : "Teknik Informatika",
+      "idDosenWali" : 1
+    },
+    {
+      "nama": "Doddy Dores",
+      "nrp" : "09328756932",
+      "email" : "doddydores@gmail.com",
+      "jurusan" : "Teknik Mesin",
+      "idDosenWali" : 2
+    },
+    {
+      "nama": "Raka Handoko",
+      "nrp" : "09328756456",
+      "email" : "rakas@gmail.com",
+      "jurusan" : "Teknik Industri",
+      "idDosenWali" : 2
+    },
+    {
+      "nama": "Michel Sania",
+      "nrp" : "09328756889",
+      "email" : "sania@gmail.com",
+      "jurusan" : "Teknik Informatika",
+      "idDosenWali" : 1
+    },
+  ];
+
+  console.log('mulai');
+  mhs.forEach(m => console.log(m.nama));
+  console.log('selesai');
+  
+  // async callback
+  console.log('----- async callback --------');
+  function getDataMahasiswa(url, success, error) {
+    let xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function() {
+      if(xhr.readyState === 4){
+        if(xhr.status == 200) {
+          success(xhr.response);
+        }else if(xhr.status === 404){
+          error();
+        }
+      }
+    }
+    xhr.open('get', url);
+    xhr.send();
+  }
+
+  console.log('start')
+  getDataMahasiswa('dataMahasiswa.json', result => {
+    console.log(JSON.parse(result));
+    console.log(result);
+    const mhs = JSON.parse(result);
+    mhs.forEach( ms => console.log(ms.nama));
+  }, () => {
+
+  });
+  console.log('end');
+
+  </script>
+
+</body>
+</html>

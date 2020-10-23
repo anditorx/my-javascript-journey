@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS BEGIN</title>
+    <script type="text/javascript">
+
+        function orang(nama,alamat) {
+            this.nama = nama;
+            this.alamat = alamat;
+        }
+
+        var peserta_01 = new orang("Andi Ankas","Kebayoran Lama, Jakarta");
+        var peserta_02 = new orang("John Doe","Batu, Malang");
+
+    </script>
+</head>
+<body>
+
+    <script type="text/javascript">
+        document.write(peserta_02.nama);
+        document.write('<br>');
+    </script>
+</body>
+</html>

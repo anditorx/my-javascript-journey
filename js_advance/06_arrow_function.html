@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Javascript Lanjutan</title>
+</head>
+<body>
+  <h1>Javascript Lanjutan</h1>
+  <h3>Arrow Function</h3>
+
+  <script type="text/javascript">
+
+    // arrow function
+    const tampilNama = (nama,waktu) => {
+        return `Hallo, ${nama}. Selamat ${waktu}`
+    }
+    console.log(tampilNama('Sandi','pagi'));
+
+    // implisit return
+    const tampilSiswa = siswa => `Hallo. ${siswa}`
+    console.log(tampilSiswa('Beni'))
+
+    const world = () => 'Hello world';
+    console.log(world())
+    console.log('----- kasus lain -----')
+
+    let mahasiswa = ['Andi','Rusti','Anto']
+    // let jumlahHuruf = mahasiswa.map(function(nama){
+    //     return nama.length
+    // })
+    let jumlahHuruf = mahasiswa.map(nama => nama.length)
+    console.log(jumlahHuruf)
+  
+  </script>
+</body>
+</html>

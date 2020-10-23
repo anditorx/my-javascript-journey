@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            line-height: 0;
+        }
+
+        body{
+            background-color: #ccc;
+            text-align: center;
+        }
+
+        .container{
+            width: 600px;
+            margin: 10px auto;
+            border: 5px solid white;
+            overflow: auto;
+        }
+
+        .thumb{
+            width: 200px;
+            float: left;
+            border: 2px solid white;
+            box-sizing: border-box;
+            
+        }
+
+        .thumb:hover{
+            opacity: 0.5;
+            cursor: pointer;
+        }
+
+        @keyframes fadeIn {
+            to{
+                opacity: 1;
+            }
+        }
+
+        .fade{
+            opacity: 0;
+            animation: fadeIn 0.5s forwards;
+        }
+
+        .active {
+            opacity: 0.5;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <img src="img/img1.jpg" alt="" class="mainImage">
+
+        <div class="thumbnail">
+            <img src="img/img6.jpg" alt="" class="thumb">
+            <img src="img/img11.jpg" alt="" class="thumb">
+            <img src="img/img12.jpg" alt="" class="thumb">
+            <img src="img/img4.jpg" alt="" class="thumb">
+            <img src="img/img7.jpg" alt="" class="thumb">
+            <img src="img/img3.jpg" alt="" class="thumb">
+        </div>
+
+    </div>
+    
+    <script type="text/javascript">
+        
+        const container = document.querySelector('.container')
+        
+        const mainImage = document.querySelector('.mainImage')
+
+        const thumbs = document.querySelectorAll('.thumb')
+
+        container.addEventListener('click',function(e){
+            // cek apakah yg di klik adalah thumb
+            if (e.target.className == 'thumb') {
+                mainImage.src = e.target.src;
+                // animation
+                mainImage.classList.add('fade')
+                setTimeout(function(){
+                    mainImage.classList.remove('fade')
+                },500)
+                
+                // active image
+                thumbs.forEach(function(thumb){
+
+                    // if (thumb.classList.contains('active')) {
+                    //     thumb.classList.remove('active')
+                    // }
+
+                    thumb.className = 'thumb'
+                })
+                e.target.classList.add('active');
+            }
+        })
+        
+
+    </script>
+    
+</body>
+</html>

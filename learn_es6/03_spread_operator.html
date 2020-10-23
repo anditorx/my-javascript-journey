@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ES6</title>
+</head>
+<body>
+    <h1>ES6</h1>
+    <h3>Spread Operator</h3>
+
+    <script type="text/javascript">
+
+      /* ---- 1 ---- */  
+      let lang = ["PHP","Javascript","Java"]
+      console.log(lang);
+      console.log(...lang);
+      /* ---- 2 ---- */
+
+      let frameworkPHP = ["Laravel","Codeigniter"]
+      let frameworkJS = ["Angular", "Vue", "React"]
+
+      console.log(frameworkPHP,frameworkJS);
+      console.log(...frameworkPHP,...frameworkJS);
+
+      /* ---- 3 ---- */
+
+      let siswaBaru = ["Sule",10,"IPA"]
+      function siswa(nama,kelas,jurusan) {
+        console.log(`Nama : ${nama} \nKelas : ${kelas} \nJurusan : ${jurusan}`);
+      }
+
+      siswa(siswaBaru);
+      siswa(...siswaBaru);
+
+    </script>
+</body>
+</html>

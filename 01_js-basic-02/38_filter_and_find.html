@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS BEGIN</title>
+</head>
+<body>
+
+    <h1>Filter & Find</h1>
+    
+    <script type="text/javascript">
+
+        var num = [1,12,3,10,4,20,6,2];
+        // filter
+        
+        var angka = num.filter(e => {
+            return e > 5;
+        })
+        console.log(angka);
+
+        // find
+        var ank = num.find(e => {
+            return e === 10
+        })
+        console.log(ank);
+    </script>
+</body>
+</html>

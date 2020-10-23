@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS BEGIN</title>
+</head>
+<body>
+
+    <h1>Foreach & Map</h1>
+    
+    <script type="text/javascript">
+
+        // foreach
+        console.log('------- foreach -------- \n');
+        var angka = [1,2,3,4,5];
+        var mhs = ["asanti","bayu","catherina","deni"]
+        for (let i = 0; i < mhs.length; i++) {
+          console.log(mhs[i]);
+        }
+
+        angka.forEach(element => {
+            console.log(element);
+        });
+
+        mhs.forEach(function(e,i){
+            console.log('Mahasiswa ke '+i+' - '+e);
+        })
+
+        // map : mengembalikan nilai array
+        console.log('------- map -------- \n');
+        var num = [1,2,3,4,5];
+        var jml = num.map(element => {
+            return element * 2
+        })
+        console.log(jml);
+
+        // sort
+        console.log('------- sort -------- \n');
+        var nunum = [1,5,8,2,4];
+        nunum.sort()
+        console.log(nunum);
+
+        var nux = [1,10,6,12,4,20];
+        nux.sort((a,b) => {
+            return a-b;
+        })
+        console.log(nux);
+
+    </script>
+</body>
+</html>

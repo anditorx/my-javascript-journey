@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Javascript Lanjutan</title>
+</head>
+<body>
+  <h1>Javascript Lanjutan</h1>
+  <h3>Rest Parameter</h3>
+
+    <script type="text/javascript">
+
+    function myFunc(a, b, ...myArgs){
+        return `a = ${a}, b = ${b}, myArgs = ${myArgs}`;
+    }
+
+    console.log(myFunc(1,2,3,4,5));
+
+    console.log('----------');
+
+    function jumlahkan(...angka){
+
+        let total = 0;
+        for(const a of angka){
+            console.log(a);
+            total += a;
+        }
+        return `total : ${total}`;
+
+
+    }
+    console.log(jumlahkan(1,2,3,4,5));
+
+    function jumlahkan2(...param) {
+        return param.reduce((a,b) => a+b);
+    }
+    console.log(jumlahkan2(1,2,3,4,5));
+
+    console.log('--------------')
+    // array destructuring
+    console.log('array destructuring');
+
+    const kel1 = ['Budi','Doremi','Wahdi','Jaya','Maman'];
+    const [ketua, wakil, ...anggota] = kel1;
+    console.log(`ketua : ${ketua}`);
+    console.log(`wakil : ${wakil}`);
+    console.log(`anggota : ${anggota}`);
+
+    console.log('------- object destructuring -----');
+    // object destructuring
+    const team = {
+        pm: 'Andi',
+        frontEnd1: 'Siti',
+        frontEnd2: 'Selly',
+        backEnd: 'Fajar',
+        ux: 'Rizky',
+        devOps: 'Wilian'
+    }
+
+    const {pm, ...myTeam} = team;
+    console.log(`PM : ${pm}`);
+    console.log(myTeam);
+
+    console.log('------------')
+    // filtering
+
+    function filterBy(type, ...values) {
+        return values.filter(v => typeof v === type);
+    }
+    console.log(filterBy('string', 1, 2, 'mahmud', false, 10, true, 'riki'));
+
+    </script>
+</body>
+</html>

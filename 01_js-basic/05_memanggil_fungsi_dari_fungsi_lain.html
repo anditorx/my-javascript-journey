@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Memanggil Fungsi</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+       
+        function breakline() {
+            document.write("<br>");
+        }
+        function pertama() {
+            document.write("Fungsi pertama");
+            breakline();
+            kedua()
+        }
+
+        function kedua(){
+            breakline();
+            document.write("Fungsi kedua");
+            breakline();
+            pertama();
+        }
+
+        function mulai(){
+            pertama();
+            kedua();
+        }
+
+        mulai();
+
+    </script>
+</body>
+</html>
